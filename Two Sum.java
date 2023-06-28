@@ -13,6 +13,16 @@ public class TwoSum {
         }
         return pairs;
     }
+}
+ public static int[] mergeAndSort(int[] array) {
+        int[] mergedArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            if (!contains(mergedArray, array[i])) {
+                mergedArray[index++] = array[i];
+            }
+        Arrays.sort(mergedArray);
+        return mergedArray;
+    }
 
     public static void mergeArray(int[] arr) {
         Arrays.sort(arr);
@@ -27,6 +37,7 @@ public class TwoSum {
                 j++;
             }
         }
+    }
         while (i < arr.length) {
             mergedArray[i] = arr[i];
             i++;
